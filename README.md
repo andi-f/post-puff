@@ -1,4 +1,4 @@
-PUFF is a program for CAE Tool for RF circuits. It was developed at Caltech [1].
+PUFF is a CAE Tool for RF circuits. It was developed at Caltech [1].
 It was originally written in Turbo-Pascal and  was shipped with a manual and the 
 sourcecode for a moderate fee. Now it is available under the GPLv3 license and 
 Pieter-Tjerk de Boer ported PUFF  to Linux [2]. He use the Free Pascal Compiler 
