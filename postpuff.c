@@ -299,9 +299,9 @@ void file_ok_proc(GtkWidget *widget, gpointer data)
 	
 	char		board = FALSE;			// flag board-Parameter active
 	char		key = FALSE;			// flag plot-Parameter active
-	char		parts = FALSE;			// flag part-Beschreibung active
+	//char		parts = FALSE;			// flag part-Beschreibung active
 	char		sparameter = FALSE;		// flag S-Parameter active
-	char		circuit = FALSE;		// flag circuit active
+	//char		circuit = FALSE;		// flag circuit active
 	
 	file =  gtk_file_selection_get_filename( GTK_FILE_SELECTION(data));
 	
@@ -330,46 +330,46 @@ void file_ok_proc(GtkWidget *widget, gpointer data)
 			{
 				board = TRUE;
 				key = FALSE;
-				parts = FALSE;
+				//parts = FALSE;
 				sparameter = FALSE;
-				circuit = FALSE;
+				//circuit = FALSE;
 			}
 			else
 			if( (*ptr) == 'k' )
 			{
 				board = FALSE;
 				key = TRUE;
-				parts = FALSE;
+				//parts = FALSE;
 				sparameter = FALSE;
-				circuit = FALSE;
+				//circuit = FALSE;
 			}
 			else
 			if( (*ptr) == 'p' )
 			{
 				board = FALSE;
 				key = FALSE;
-				parts = TRUE;
+				//parts = TRUE;
 				sparameter = FALSE;
-				circuit = FALSE;
+				//circuit = FALSE;
 			}
 			else
 			if( (*ptr) == 's' )
 			{
 				board = FALSE;
 				key = FALSE;
-				parts = FALSE;
+				//parts = FALSE;
 				sparameter = TRUE;
 				spara_line = 0u;
-				circuit = FALSE;
+				//circuit = FALSE;
 			}
 			else
 			if( (*ptr) == 'c' )
 			{
 				board = FALSE;
 				key = FALSE;
-				parts = FALSE;
+				//parts = FALSE;
 				sparameter = FALSE;
-				circuit = TRUE;
+				//circuit = TRUE;
 			}
 		}
 
