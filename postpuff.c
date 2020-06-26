@@ -299,9 +299,9 @@ void file_ok_proc(GtkWidget *widget, gpointer data)
 	
 	char		board = FALSE;			// flag board-Parameter active
 	char		key = FALSE;			// flag plot-Parameter active
-	char		parts = FALSE;			// flag part-Beschreibung active
+	//char		parts = FALSE;			// flag part-Beschreibung active
 	char		sparameter = FALSE;		// flag S-Parameter active
-	char		circuit = FALSE;		// flag circuit active
+	//char		circuit = FALSE;		// flag circuit active
 	
 	file =  gtk_file_selection_get_filename( GTK_FILE_SELECTION(data));
 	
@@ -330,46 +330,46 @@ void file_ok_proc(GtkWidget *widget, gpointer data)
 			{
 				board = TRUE;
 				key = FALSE;
-				parts = FALSE;
+				//parts = FALSE;
 				sparameter = FALSE;
-				circuit = FALSE;
+				//circuit = FALSE;
 			}
 			else
 			if( (*ptr) == 'k' )
 			{
 				board = FALSE;
 				key = TRUE;
-				parts = FALSE;
+				//parts = FALSE;
 				sparameter = FALSE;
-				circuit = FALSE;
+				//circuit = FALSE;
 			}
 			else
 			if( (*ptr) == 'p' )
 			{
 				board = FALSE;
 				key = FALSE;
-				parts = TRUE;
+				//parts = TRUE;
 				sparameter = FALSE;
-				circuit = FALSE;
+				//circuit = FALSE;
 			}
 			else
 			if( (*ptr) == 's' )
 			{
 				board = FALSE;
 				key = FALSE;
-				parts = FALSE;
+				//parts = FALSE;
 				sparameter = TRUE;
 				spara_line = 0u;
-				circuit = FALSE;
+				//circuit = FALSE;
 			}
 			else
 			if( (*ptr) == 'c' )
 			{
 				board = FALSE;
 				key = FALSE;
-				parts = FALSE;
+				//parts = FALSE;
 				sparameter = FALSE;
-				circuit = TRUE;
+				//circuit = TRUE;
 			}
 		}
 
@@ -424,7 +424,7 @@ void file_ok_proc(GtkWidget *widget, gpointer data)
 			if( (spara_line == 2) )
 			{			
 				
-				sscanf(&buf, "%s %s %s %s %s", tmp[0], tmp[1], tmp[2], tmp[3], tmp[4]);
+				sscanf(buf, "%s %s %s %s %s", tmp[0], tmp[1], tmp[2], tmp[3], tmp[4]);
 			    for (i=0; i<4; i++)
 			    {
 						if ((strcmp(sp[i], tmp[i+1])) == 0)
@@ -444,7 +444,7 @@ void file_ok_proc(GtkWidget *widget, gpointer data)
 				
 			if( (spara_line > 2) )
 			{			
-				sscanf(&buf,"%lf %lf %lf %lf %lf %lf %lf %lf %lf",
+				sscanf(buf,"%lf %lf %lf %lf %lf %lf %lf %lf %lf",
 					&spara[n].qrg,
 					&spara[n].s11,
 					&spara[n].s11_dec,
