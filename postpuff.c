@@ -424,7 +424,7 @@ void file_ok_proc(GtkWidget *widget, gpointer data)
 			if( (spara_line == 2) )
 			{			
 				
-				sscanf(&buf, "%s %s %s %s %s", tmp[0], tmp[1], tmp[2], tmp[3], tmp[4]);
+				sscanf(buf, "%s %s %s %s %s", tmp[0], tmp[1], tmp[2], tmp[3], tmp[4]);
 			    for (i=0; i<4; i++)
 			    {
 						if ((strcmp(sp[i], tmp[i+1])) == 0)
@@ -444,7 +444,7 @@ void file_ok_proc(GtkWidget *widget, gpointer data)
 				
 			if( (spara_line > 2) )
 			{			
-				sscanf(&buf,"%lf %lf %lf %lf %lf %lf %lf %lf %lf",
+				sscanf(buf,"%lf %lf %lf %lf %lf %lf %lf %lf %lf",
 					&spara[n].qrg,
 					&spara[n].s11,
 					&spara[n].s11_dec,
